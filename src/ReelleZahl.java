@@ -8,22 +8,27 @@ public class ReelleZahl extends Zahl implements Comparable{
 	}
 
 	@Override
-	public Zahl add(Zahl Zahl) {
+	public ReelleZahl add(Zahl zahl) {
 		// TODO Auto-generated method stub
-		return null;
+		ReelleZahl temp = (ReelleZahl) zahl;
+		return new ReelleZahl(value + temp.value);
 	}
 	
 	public boolean equals(Object zahl) {
-		
-		
-		
-		return false;
+		ReelleZahl temp = (ReelleZahl) zahl;
+
+		return temp.value == value;
 	}
 
 	@Override
 	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
+		ReelleZahl temp = (ReelleZahl) o;
+		if(temp.value == value) {
+			return 0;
+		} else if (temp.value > value) {
+			return 1;
+		} 
+		return -1;
 	}
 
 }
