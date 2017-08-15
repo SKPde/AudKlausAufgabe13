@@ -25,7 +25,7 @@ public class ReelleZahl extends Zahl implements Comparable{
 		ReelleZahl temp = (ReelleZahl) o;
 		if(temp.value == value) {
 			return 0;
-		} else if (temp.value > value) {
+		} else if (temp.value < value) {
 			return 1;
 		} 
 		return -1;
